@@ -54,9 +54,7 @@
     });
     });
 
-    $(function() {
-      let lang =localStorage.getItem('language');
-      changeLanguage(lang);
+    $(function() {      
       $('.translate').click(function(){
         lang = $(this).attr('id');
         localStorage.setItem('language', lang);
