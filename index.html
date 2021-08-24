@@ -30,7 +30,7 @@
 
   <!-- Multilanguage Section -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+  
   <script>
     let arrLang = {
           en: {
@@ -45,6 +45,14 @@
               'title' : 'കൃഷികർണ'
           }
       }
+
+    $(document).ready(function() {
+    // The default language is English
+    var lang = "ml";
+    $(".lang").each(function(index, element) {
+    $(this).text(arrLang[lang][$(this).attr("key")]);
+    });
+    });
 
     $(function() {
       let lang =localStorage.getItem('language');
